@@ -62,9 +62,8 @@ echo '<form action="' . rex_url::currentBackendPage() . '" method="POST">';
     <input type="hidden" name="update" value="<?= $current ?>"/>
     <textarea id="cssinput" class="aceeditor"
               name="cssinput"
-              rows="10" cols="50" aceeditor-width="800px" aceeditor-height="300px" aceeditor-theme="github"
-              aceeditor-mode="css"
-              aceeditor-options='{"showLineNumbers": true, "showGutter": true}'><?= file_get_contents($dir . $current) ?></textarea>
+              rows="10" cols="50" aceeditor-width="inherit" aceeditor-height="300px"
+              aceeditor-mode="css"><?= file_get_contents($dir . $current) ?></textarea>
 <?php
 
 echo '<button>Speichern</button>';

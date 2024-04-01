@@ -24,9 +24,8 @@ echo '</div>';
 echo '<div class="col-sm-8">';
 ?>
     <textarea id="jsinput" class="aceeditor"
-              rows="10" cols="50" aceeditor-width="800px" aceeditor-height="300px" aceeditor-theme="chaos"
-              aceeditor-mode="js"
-              aceeditor-options='{"showLineNumbers": true, "showGutter": true}'></textarea>
+              rows="10" cols="50" aceeditor-width="inherit" aceeditor-height="300px"
+              aceeditor-mode="js"></textarea>
 <?php
 echo '</div>';
 

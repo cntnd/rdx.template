@@ -8,6 +8,8 @@
             for (var i = 0; i < aceTextAreas.length; i++) {
                 let textArea = aceTextAreas[i];
                 editor = textAreaToAceEditor(textArea);
+                editor.setTheme('github');
+                editor.setOptions({"showLineNumbers": true, "showGutter": true});
                 // hier können noch weitere Optionen gesetzt werden
                 // z.B. editor.setOptions()
             }
