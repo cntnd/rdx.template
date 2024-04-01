@@ -5,3 +5,11 @@ info: 'Add On zum editieren der CSS/JS Dateien des Templates'
 
 page:
   title: 'translate:title'
+
+installer_ignore:
+  - xampp.bat
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - node_modules
+  - addon
