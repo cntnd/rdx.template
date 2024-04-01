@@ -11,5 +11,6 @@ installer_ignore:
   - gulpfile.js
   - package.json
   - package-lock.json
+  - .github
   - node_modules
   - addon
