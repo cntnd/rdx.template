@@ -1,0 +1,7 @@
+package: cntndTemplate
+version: '0.0.1'
+author: 'Thomas D Ascoli'
+info: 'Add On zum editieren der CSS/JS Dateien des Templates'
+
+page:
+  title: 'translate:title'
