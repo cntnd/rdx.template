@@ -5,6 +5,14 @@ info: 'Add On zum editieren der CSS/JS Dateien des Templates'
 
 page:
   title: 'translate:title'
+  icon: rex-icon fa-box
+  subpages:
+    css: {title: 'translate:css'}
+    js: {title: 'translate:js'}
+
+requires:
+  packages:
+    aceeditor: '^1.2.1'
 
 installer_ignore:
   - xampp.bat
