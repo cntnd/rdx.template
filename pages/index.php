@@ -1,17 +1,15 @@
-<link rel="stylesheet" type="text/css" href="<?= rex_addon::get('aceeditor')->getAssetsUrl('css/aceeditor.min.css') ?>" />
+<link rel="stylesheet" type="text/css"
+      href="<?= rex_addon::get('aceeditor')->getAssetsUrl('css/aceeditor.min.css') ?>"/>
 <script src="<?= rex_addon::get('aceeditor')->getAssetsUrl('vendor/aceeditor/ace.js') ?>"></script>
 <script src="<?= rex_addon::get('aceeditor')->getAssetsUrl('js/aceeditor.min.js') ?>"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         let aceTextAreas = document.querySelectorAll('textarea.aceeditor');
         if (aceTextAreas.length > 0) {
             for (var i = 0; i < aceTextAreas.length; i++) {
                 let textArea = aceTextAreas[i];
-                editor = textAreaToAceEditor(textArea);
-                editor.setTheme('github');
+                let editor = textAreaToAceEditor(textArea);
                 editor.setOptions({"showLineNumbers": true, "showGutter": true});
-                // hier können noch weitere Optionen gesetzt werden
-                // z.B. editor.setOptions()
             }
         }
     });
