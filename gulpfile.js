@@ -6,7 +6,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('addon', function () {
-    return gulp.src(['assets/*', 'data/*', 'fragments/*', 'lang/*', 'lib/*', 'pages/*', 'plugins/*', 'vendor/*', '*.php', '*.sql', 'README.md', 'package.yml'], {"base" : ".", "allowEmpty": true})
+    return gulp.src(['assets/*', 'data/*', 'fragments/*', 'lang/*', 'lib/*', 'pages/*', 'plugins/*', 'vendor/*', '*.php', '*.sql', 'README.md', 'LICENSE', 'package.yml'], {"base" : ".", "allowEmpty": true})
         .pipe(gulp.dest('addon'));
 });
 
