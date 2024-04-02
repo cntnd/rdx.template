@@ -1,6 +1,8 @@
 <?php
 
 $current = $this->current;
+$dir = $this->dir;
+$mode = $this->mode;
 
 echo '<form action="' . rex_url::currentBackendPage() . '" method="POST" id="cntndTemplate_form">';
 echo '<div class="row">';
@@ -10,9 +12,9 @@ echo '<ul class="list-group">';
 echo '<li class="list-group-item list-group-item-action">';
 echo '<a href="#" class="alert_new_file" aria-expanded="false"><i class="fa-solid fa-plus"></i> Datei erstellen</a>';
 echo '</li>';
-$files = scandir($this->dir, SCANDIR_SORT_ASCENDING);
+$files = scandir($dir, SCANDIR_SORT_ASCENDING);
 foreach ($files as $file) {
-    if (is_file($this->dir . $file) && str_ends_with($file, "." . $this->mode)) {
+    if (is_file($dir . $file) && str_ends_with($file, "." . $this->mode)) {
         if (empty($current)) {
             $current = $file;
         }
@@ -24,18 +26,20 @@ echo '</div>';
 
 echo '<div class="col-sm-8">';
 $content = "";
+$disabled = "disabled";
 if (!empty($current)) {
-    $content = file_get_contents($this->dir . $current);
+    $content = file_get_contents($dir . $current);
+    $disabled = "";
 }
 ?>
     <textarea id="input" class="aceeditor"
               name="input"
               rows="10" cols="50" aceeditor-width="100%" aceeditor-height="500px" aceeditor-theme="github"
               aceeditor-options='{"showLineNumbers": true, "showGutter": true}'
-              aceeditor-mode="<?= $this->mode ?>"><?= $content ?></textarea>
+              aceeditor-mode="<?= $mode ?>"><?= $content ?></textarea>
 <?php
 
-echo '<button type="submit">Speichern</button>';
+echo '<button type="submit" '.$disabled.'>Speichern</button>';
 echo '</div>';
 
 echo '</div>';
