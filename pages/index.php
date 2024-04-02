@@ -9,7 +9,6 @@
             for (var i = 0; i < aceTextAreas.length; i++) {
                 let textArea = aceTextAreas[i];
                 let editor = textAreaToAceEditor(textArea);
-                editor.setOptions({"showLineNumbers": true, "showGutter": true});
             }
         }
     });
