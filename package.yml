@@ -1,4 +1,4 @@
-package: cntndTemplate
+package: rdx.theme
 version: '0.0.1'
 author: 'Thomas D Ascoli'
 info: 'Add On zum editieren der CSS/JS Dateien des Templates'
@@ -7,6 +7,7 @@ page:
   title: 'translate:title'
   icon: rex-icon fa-box
   subpages:
+    theme: {title: 'translate:theme'}
     css: {title: 'translate:css'}
     js: {title: 'translate:js'}
 

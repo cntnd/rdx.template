@@ -4,7 +4,7 @@ $current = $this->current;
 $dir = $this->dir;
 $mode = $this->mode;
 
-echo '<form action="' . rex_url::currentBackendPage() . '" method="POST" id="cntndTemplate_form">';
+echo '<form action="' . rex_url::currentBackendPage() . '" method="POST" id="rdx.theme_form">';
 echo '<div class="row">';
 
 echo '<div class="col-sm-3">';
@@ -43,6 +43,6 @@ echo '<button type="submit" '.$disabled.'>Speichern</button>';
 echo '</div>';
 
 echo '</div>';
-echo '<input type="hidden" name="file" value="' . $current . '" id="cntndTemplate_file" />';
-echo '<input type="hidden" name="action" value="update" id="cntndTemplate_action" />';
+echo '<input type="hidden" name="file" value="' . $current . '" id="rdx.theme_file" />';
+echo '<input type="hidden" name="action" value="update" id="rdx.theme_action" />';
 echo '</form>';

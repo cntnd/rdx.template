@@ -1,5 +1,6 @@
 <?php
-$dir = rex_path::assets('cymka/js/');
+$theme = $this->getConfig('theme');
+$dir = rex_path::assets($theme.'/js/');
 $fragment = new rex_fragment();
 $fragment->setVar('mode', 'js', false);
 $fragment->setVar('dir', $dir, false);

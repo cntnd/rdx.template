@@ -1,4 +1,8 @@
-cntndTemplate_title = cntnd Template
+rdx.theme_title = rdx.Theme
 
-cntndTemplate_css = CSS
-cntndTemplate_js = JS
+rdx.theme_theme = Theme
+rdx.theme_css = CSS
+rdx.theme_js = JS
+
+rdx.theme_saved = Erfolgreich gespeichert
+rdx.theme_save = Speichern
