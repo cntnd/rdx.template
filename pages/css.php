@@ -2,6 +2,7 @@
 
 /** @var rex_addon $this */
 
+$mode = 'css';
 $theme = trim((string) $this->getConfig('theme'));
 
 if ('' === $theme) {
@@ -9,7 +10,12 @@ if ('' === $theme) {
     return;
 }
 
-$dir = rex_path::assets($theme . '/css/');
+if (!rdx_theme::isValidName($theme)) {
+    echo rex_view::error($this->i18n('theme_invalid'));
+    return;
+}
+
+$dir = rdx_theme::getDir($theme, $mode);
 
 if (!is_dir($dir) && !rex_dir::create($dir)) {
     echo rex_view::error($this->i18n('dir_not_created', $dir));
@@ -17,11 +23,11 @@ if (!is_dir($dir) && !rex_dir::create($dir)) {
 }
 
 $fragment = new rex_fragment();
-$fragment->setVar('mode', 'css', false);
+$fragment->setVar('mode', $mode, false);
 $fragment->setVar('dir', $dir, false);
 
 // get current file
-$current = rex_request('file');
+$current = rex_request('file', 'string');
 $fragment->setVar('current', $current, false);
 
 $content = $fragment->parse('action.php');
