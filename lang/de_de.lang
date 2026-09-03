@@ -6,3 +6,5 @@ rdx.theme_js = JS
 
 rdx.theme_saved = Erfolgreich gespeichert
 rdx.theme_save = Speichern
+rdx.theme_theme_missing = Es ist noch kein Theme konfiguriert. Bitte zuerst unter "Theme" einen Ordnernamen angeben.
+rdx.theme_dir_not_created = Das Verzeichnis "{0}" konnte nicht erstellt werden. Bitte Schreibrechte im Ordner "assets" prüfen.

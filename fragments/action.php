@@ -4,6 +4,10 @@ $current = $this->current;
 $dir = $this->dir;
 $mode = $this->mode;
 
+if (!is_dir($dir) && !rex_dir::create($dir)) {
+    return;
+}
+
 // create new file
 if (rex_request('action') == "create") {
     $new_file = rex_request('file');
